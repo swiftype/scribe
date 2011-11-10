@@ -12,6 +12,7 @@ http://groups.google.com/group/scribe-server/
 
 This fork of facebook/scribe uses CMake instead of autoconf.
 
+
 License (See LICENSE file for full license)
 ===========================================
 Copyright 2007-2008 Facebook
@@ -71,6 +72,7 @@ Subsequent builds
 make
 
 "rm CMakeCache.txt" and run "cmake ." if you build environment changes.
+
 
 Install
 =======
