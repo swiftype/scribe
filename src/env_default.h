@@ -34,7 +34,7 @@
 #include "thrift/transport/TBufferTransports.h"
 #include "thrift/transport/TSimpleFileTransport.h"
 
-#include "fb303/FacebookBase.h"
+#include "src/gen-cpp/FacebookBase.h"
 
 #include "src/gen-cpp/scribe.h"
 #include "src/gen-cpp/BucketStoreMapping.h"
