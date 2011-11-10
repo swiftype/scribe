@@ -68,9 +68,9 @@ make
 Subsequent builds
 =================
 
-```make```
+make
 
-```rm CMakeCache.txt``` and run ```cmake .``` if you build environment changes.
+"rm CMakeCache.txt" and run "cmake ." if you build environment changes.
 
 Install
 =======
