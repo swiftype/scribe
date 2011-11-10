@@ -49,3 +49,6 @@ target_link_libraries(scribe
 	thrift 
 	thriftnb 
 )
+
+INSTALL(TARGETS scribe DESTINATION bin)
+INSTALL(DIRECTORY ../examples DESTINATION scribe) 
