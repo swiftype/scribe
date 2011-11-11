@@ -50,7 +50,7 @@ Requirements
 
 * [libevent] Event Notification library
 * [boost] Boost C++ library (version 1.36 or later)
-* [thrift] Thrift framework (version 0.5.0 or later)
+* [thrift] Thrift framework (version 0.7.0 or later)
 
 These libraries are open source and may be freely obtained, but they are not
 provided as a part of this distribution.
@@ -60,7 +60,7 @@ To build
 ------------
 
 ```
-./bootstrap.sh 
+cmake .
 make
 ```
 
@@ -72,7 +72,7 @@ Subsequent builds
 make
 ```
 
-```rm CMakeCache.txt``` and run ```cmake .``` if you build environment changes.
+```rm CMakeCache.txt``` and run ```cmake .``` if your build environment changes.
 
 
 Install
