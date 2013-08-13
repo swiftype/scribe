@@ -2158,7 +2158,7 @@ void BucketStore::createBuckets(pStoreConf configuration) {
   }
 
   // Check if an extra bucket is defined
-  if (configuration->getStore("bucket" + (numBuckets + 1), tmp)) {
+  if (configuration->getStore("bucket" + boost::lexical_cast<string>(numBuckets + 1), tmp)) {
     error_msg = "bucket store has too many buckets defined";
     goto handle_error;
   }
