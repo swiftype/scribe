@@ -20,7 +20,7 @@ else((tv_major STREQUAL 0) AND (tv_minor STRLESS 7))
     exec_program(${THRIFT_BIN} ARGS -o src --gen cpp:pure_enums if/scribe.thrift)
 endif((tv_major STREQUAL 0) AND (tv_minor STRLESS 7))
 
-set(CMAKE_CXX_FLAGS "-O2 -Wall -Wno-long-long -Wno-variadic-macros -Wno-return-type -Wno-unused-variable -Wno-reorder")
+set(CMAKE_CXX_FLAGS "-O2 -Wall -Wno-long-long -Wno-variadic-macros -Wno-return-type -Wno-unused-variable -Wno-reorder -std=c++11")
 
 add_subdirectory (src/gen-cpp) 
 

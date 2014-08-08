@@ -2,10 +2,10 @@
 // You should copy it to another filename to avoid overwriting it.
 
 #include "scribe.h"
-#include <protocol/TBinaryProtocol.h>
-#include <server/TSimpleServer.h>
-#include <transport/TServerSocket.h>
-#include <transport/TBufferTransports.h>
+#include <thrift/protocol/TBinaryProtocol.h>
+#include <thrift/server/TSimpleServer.h>
+#include <thrift/transport/TServerSocket.h>
+#include <thrift/transport/TBufferTransports.h>
 
 using namespace ::apache::thrift;
 using namespace ::apache::thrift::protocol;
@@ -14,7 +14,7 @@ using namespace ::apache::thrift::server;
 
 using boost::shared_ptr;
 
-using namespace scribe::thrift;
+using namespace  ::scribe::thrift;
 
 class scribeHandler : virtual public scribeIf {
  public:

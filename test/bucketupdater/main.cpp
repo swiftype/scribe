@@ -90,12 +90,12 @@ int main(int argc, char **argv) {
       abort();
     }
   }
-  shared_ptr<TProtocolFactory> protocolFactory(new TBinaryProtocolFactory());
-  shared_ptr<BucketStoreMappingHandler> handler(new BucketStoreMappingHandler(file));
-  shared_ptr<BucketStoreMappingProcessor> processor(new BucketStoreMappingProcessor(handler));
-  shared_ptr<TServerSocket> serverSocket(new TServerSocket(port));
+  boost::shared_ptr<TProtocolFactory> protocolFactory(new TBinaryProtocolFactory());
+  boost::shared_ptr<BucketStoreMappingHandler> handler(new BucketStoreMappingHandler(file));
+  boost::shared_ptr<BucketStoreMappingProcessor> processor(new BucketStoreMappingProcessor(handler));
+  boost::shared_ptr<TServerSocket> serverSocket(new TServerSocket(port));
   //shared_ptr<TTransportFactory> transportFactory(new TBufferedTransportFactory());
-  shared_ptr<TTransportFactory> transportFactory(new TFramedTransportFactory());
+  boost::shared_ptr<TTransportFactory> transportFactory(new TFramedTransportFactory());
 
   TSimpleServer server(processor, serverSocket, transportFactory, protocolFactory);
   server.serve();

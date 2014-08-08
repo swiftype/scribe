@@ -37,7 +37,7 @@ FIND_LIBRARY(EVENT_LIB event)
 
 # Thrift
 FIND_PATH(THRIFT_INCLUDE_DIR Thrift.h PATH_SUFFIXES thrift)
-INCLUDE_DIRECTORIES(${THRIFT_INCLUDE_DIR}) 
+INCLUDE_DIRECTORIES(${THRIFT_INCLUDE_DIR})
 FIND_LIBRARY(THRIFT_LIB thrift)
 FIND_LIBRARY(THRIFT_NB_LIB thriftnb)
 
@@ -45,13 +45,13 @@ FIND_LIBRARY(THRIFT_NB_LIB thriftnb)
 INCLUDE_DIRECTORIES(${CMAKE_SOURCE_DIR})
 
 add_executable(scribe ${headers} ${sources})
-target_link_libraries(scribe 
+target_link_libraries(scribe
     ${Boost_LIBRARIES}
-    scribe_if 
+    scribe_if
     ${EVENT_LIB}
     ${THRIFT_LIB}
     ${THRIFT_NB_LIB}
 )
 
 INSTALL(TARGETS scribe DESTINATION bin)
-INSTALL(DIRECTORY ../examples DESTINATION scribe) 
+INSTALL(DIRECTORY ../examples DESTINATION scribe)
